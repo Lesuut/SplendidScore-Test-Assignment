@@ -1,8 +1,8 @@
-- !<Material/e22d24e9-3477-40a6-a192-587070c1c436>
+- !<Material/ede348aa-1d82-4766-a5ed-2268ff92ff45>
   PackagePath: ""
   PassesInfo:
-    - !<own> 3d52ab34-2d7a-4324-9434-b410fff11dde
-- !<PassInfo/3d52ab34-2d7a-4324-9434-b410fff11dde>
+    - !<own> ec17fefb-6624-43ca-b5cd-d90055cd603a
+- !<PassInfo/ec17fefb-6624-43ca-b5cd-d90055cd603a>
   CachedProperties:
     - Port_Depth_N004:
         typeIdx: 1
@@ -52,6 +52,30 @@
     - Port_WorldTangent_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - alphaTestThreshold:
+        typeIdx: 1
+        value: 0.500000
+    - correctedIntensity:
+        typeIdx: 1
+        value: 0.000000
+    - intensityTexture:
+        typeIdx: 9
+        value:
+          id: 00000000-0000-0000-0000-000000000000
+          sampler:
+            filteringMode: Bilinear
+            wrapModeU: ClampToEdge
+            wrapModeV: ClampToEdge
+            wrapModeW: ClampToEdge
+            borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+            mipmaps: false
+          type: Texture2D
+    - intensityTextureTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -64,9 +88,9 @@
   InstanceCount: 1
   Defines:
     - ENABLE_BASE_TEX
-    - ENABLE_NORMALMAP
     - ENABLE_LIGHTING
-  BlendMode: Disabled
+    - ENABLE_NORMALMAP
+  BlendMode: PremultipliedAlphaAuto
   Properties:
     Port_Center_N016:
       typeIdx: 3
@@ -83,7 +107,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: dd167f1b-8c3f-4738-8b7d-3bb10c21d63f
+        id: ebd69cee-fef2-4fbd-9005-bde63ca99164
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -101,7 +125,7 @@
     materialParamsTex:
       typeIdx: 9
       value:
-        id: 46006785-6f30-4701-8c67-1852b1e63d02
+        id: 938ed316-e142-4139-8802-d22aab360822
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat

@@ -4,9 +4,10 @@
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> 7faadcc6-8c23-4e00-86b2-53f40dfc01b9
     - !<own> 9190ce77-b98b-4a58-9286-6af2fcd4931a
-    - !<own> a52d556c-8f18-4dc9-86d8-1300dc36fba7
+    - !<own> ae811797-2f85-4faf-ac78-87ecfdc2bb4b
     - !<own> e8fc2ba2-de3e-49d8-869f-66418e9b86c0
     - !<own> c93c36bc-d4b1-4ebf-91cf-1d7ec91209a3
+    - !<own> 08e736f5-6caf-4145-806f-b90b7f48ca4b
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -30,34 +31,73 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 00056e79-b066-62ca-0000-000000001406
-    - !<own> 0005641c-028d-4630-0000-000000014b56
+    - !<own> ab25e499-6dd1-4924-974c-7f18f658b6b7
   Components:
     []
-- !<SceneObject/0005641c-028d-4630-0000-000000014b56>
+- !<SceneObject/08e736f5-6caf-4145-806f-b90b7f48ca4b>
   PrefabRemaps:
     []
-  Name: Light
+  Name: Box
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 40.000000, y: 85.000000, z: 20.000000}
-    Rotation: {x: 70.000000, y: 10.000000, z: 150.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    Position: {x: 0.000000, y: 8.500000, z: 7.415760}
+    Rotation: {x: -19.738016, y: -27.273651, z: -12.628489}
+    Scale: {x: 5.000000, y: 5.000000, z: 5.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
   Components:
-    - !<own> 0005641c-028d-463e-0000-000000014b59
-- !<LightSource/0005641c-028d-463e-0000-000000014b59>
+    - !<own> 15883eac-e7c1-4916-93d8-e73f8074f1cd
+- !<RenderMeshVisual/15883eac-e7c1-4916-93d8-e73f8074f1cd>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: Caster
+  ShadowColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> c7783bc1-5065-4fd5-a2f9-9a607893dec2
+  Mesh: !<reference> 2fa5bdfe-13a9-41d8-a811-674209fbd8d3
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/2027f828-bd5e-404e-9b30-3b28d88842cb>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 7a3ce001-d213-4a78-98fd-b274e9b2e649
+  Mesh: !<reference> 1a4cd375-e960-45b9-9996-2b02435d534f
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<LightSource/2f39ceaa-3c20-4d1b-ab68-e90b18052680>
   PrefabRemaps:
     []
   Name: Light Source
   Enabled: true
-  renderLayer: 1310719
+  renderLayer: 1
   LightType: Directional
-  Intensity: 1.000000
-  ShadowDensity: 0.440000
+  Intensity: 2.000000
+  ShadowDensity: 0.500000
   ShadowBlurRadius: 4.000000
   ShadowTextureSize: 512
   AutoLightSourcePosition: true
@@ -80,55 +120,15 @@
   OuterConeAngle: 45.000000
   FalloffType: None
   FalloffRange: .inf
-  ShadowType: None
-- !<SceneObject/00056e79-b066-62ca-0000-000000001406>
-  PrefabRemaps:
-    []
-  Name: Envmap
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 65.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 00056e79-b066-62f1-0000-000000001409
-- !<LightSource/00056e79-b066-62f1-0000-000000001409>
-  PrefabRemaps:
-    []
-  Name: Light Source
-  Enabled: true
-  renderLayer: 1310719
-  LightType: EnvMap
-  Intensity: 1.000000
-  ShadowDensity: 1.000000
-  ShadowBlurRadius: 0.000000
-  ShadowTextureSize: 512
-  AutoLightSourcePosition: false
-  AutoShadowFrustumSize: false
-  AutoShadowFrustumSizeExtend: 2.000000
-  ShadowFrustumSize: 30.000000
-  ShadowFrustumNearClipPlane: 1.000000
-  ShadowFrustumFarClipPlane: 1000.000000
-  UseEnvMapFromCamera: false
-  EnvMapFromCameraMode: Auto
-  EstimationSharpness: 1.000000
-  EnvMapExposure: 1.000000
-  EnvMapRotation: 0.000000
-  DiffuseEnvTexture: !<reference> 2013a19b-93c1-4f21-b7ea-876a33550c7b
-  SpecularEnvTexture: !<reference> d795fd46-e16b-4cb9-8dfb-4ef227298f7a
-  Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-  DynamicEnvInputTexture: !<reference> 00000000-0000-0000-0000-000000000000
-  InnerConeAngle: 0.000000
-  OuterConeAngle: 45.000000
-  FalloffType: None
-  FalloffRange: .inf
-  ShadowType: None
-- !<RenderMeshVisual/2027f828-bd5e-404e-9b30-3b28d88842cb>
+  ShadowType: ShadowMap
+  ShadowMapProperties: !<ShadowMapProperties>
+    ShadowMapQuality: Standard512
+    ShadowMapPCF: true
+    ShadowMapSoftShadow: true
+    ShadowMapRandomSampling: false
+    ShadowMapBias: 0.000000
+    ShadowMapSampleCount: 16
+- !<RenderMeshVisual/6fbe0c90-14b9-4a84-bc8f-fcd145d41312>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
@@ -137,31 +137,11 @@
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
-  MeshShadowMode: None
+  MeshShadowMode: Receiver
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 7a3ce001-d213-4a78-98fd-b274e9b2e649
-  Mesh: !<reference> 1a4cd375-e960-45b9-9996-2b02435d534f
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/61ccdb19-874e-4e8d-a298-a5d8066ab78b>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 104d97fa-ef6f-4284-8667-886ccb61545f
+    - !<reference> 3a0edd55-9028-4f14-93dd-c6d4ec293b8f
   Mesh: !<reference> 36fc9ebf-84eb-4f5a-979c-61d3f0f208bd
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
@@ -198,21 +178,71 @@
     []
   Components:
     - !<own> ec2ccf79-03e2-4cf4-88fa-06a7cedc18ec
-- !<SceneObject/a52d556c-8f18-4dc9-86d8-1300dc36fba7>
+- !<RenderMeshVisual/a626c5a8-bc15-4b01-b8cf-d89a4a4b44a1>
   PrefabRemaps:
     []
-  Name: Ground 1
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: Receiver
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 3b16855c-6ba2-4093-a0ea-5000f52f5412
+  Mesh: !<reference> 36fc9ebf-84eb-4f5a-979c-61d3f0f208bd
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/ab25e499-6dd1-4924-974c-7f18f658b6b7>
+  PrefabRemaps:
+    []
+  Name: Light
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 100.000000}
-    Rotation: {x: 0.000000, y: 90.000000, z: 0.000000}
-    Scale: {x: 100.000000, y: 1.000000, z: 15.000000}
+    Position: {x: 0.000000, y: 25.000000, z: 0.000000}
+    Rotation: {x: -144.184479, y: 20.544054, z: -10.091283}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
   Components:
-    - !<own> 61ccdb19-874e-4e8d-a298-a5d8066ab78b
+    - !<own> 2f39ceaa-3c20-4d1b-ab68-e90b18052680
+- !<SceneObject/ae811797-2f85-4faf-ac78-87ecfdc2bb4b>
+  PrefabRemaps:
+    []
+  Name: Grass
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 13.233211, y: 0.454348, z: 0.000000}
+    Rotation: {x: 0.000000, y: 90.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 1.000000, z: 15.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> b8a12ab1-9a4e-45ab-b1de-70c6e562ab83
+  Components:
+    - !<own> 6fbe0c90-14b9-4a84-bc8f-fcd145d41312
+- !<SceneObject/b8a12ab1-9a4e-45ab-b1de-70c6e562ab83>
+  PrefabRemaps:
+    []
+  Name: Shadow
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -0.258430, z: -0.037638}
+    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a626c5a8-bc15-4b01-b8cf-d89a4a4b44a1
 - !<Camera/b9f9b07c-cdc0-4e37-89d0-2310b7a8fbf3>
   PrefabRemaps:
     []
@@ -268,7 +298,7 @@
   PrefabRemaps:
     []
   Name: Water
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -106.666466, y: -1.972942, z: 0.000000}
@@ -303,7 +333,7 @@
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
-  MeshShadowMode: None
+  MeshShadowMode: Receiver
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:

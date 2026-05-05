@@ -1,8 +1,8 @@
-- !<Material/104d97fa-ef6f-4284-8667-886ccb61545f>
+- !<Material/3a0edd55-9028-4f14-93dd-c6d4ec293b8f>
   PackagePath: ""
   PassesInfo:
-    - !<own> 7b1081c6-f299-4481-8f33-9bcb8bd72855
-- !<PassInfo/7b1081c6-f299-4481-8f33-9bcb8bd72855>
+    - !<own> 366afb60-b9dc-4006-83e5-e2c02d7f8ef7
+- !<PassInfo/366afb60-b9dc-4006-83e5-e2c02d7f8ef7>
   CachedProperties:
     []
   DepthWrite: true
@@ -34,7 +34,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: ebd69cee-fef2-4fbd-9005-bde63ca99164
+        id: 187e3c34-1e30-4ab1-b64d-b0bde39992cc
         sampler:
           filteringMode: Bilinear
           wrapModeU: ClampToEdge
