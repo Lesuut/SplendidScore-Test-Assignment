@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/de0329b9-f34b-4417-a45b-7a6bf36ee72f>
+- !<AssetImportMetadata/f3314292-1127-44f6-8b27-84a750efb35d>
   ImportedAssetIds:
-    JavaScriptAsset: !<reference> 5e170346-ae68-4767-90c1-746b6001400d
+    JavaScriptAsset: !<reference> 8ebe3989-36fb-4625-8953-054c23060957
   ImporterName: JavaScriptAssetImporter
-  PrimaryAsset: !<reference> 5e170346-ae68-4767-90c1-746b6001400d
+  PrimaryAsset: !<reference> 8ebe3989-36fb-4625-8953-054c23060957
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    JavaScriptAsset: !<own> ad153daf-942f-4777-af78-52ee6e7bcef0
+    JavaScriptAsset: !<own> d1357b20-b55f-44d8-b786-f40611d93334
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptAssetData/ad153daf-942f-4777-af78-52ee6e7bcef0>
+- !<ScriptAssetData/d1357b20-b55f-44d8-b786-f40611d93334>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -22,11 +22,15 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: ea8e9c34-7f70-448d-ab6e-f4a12f3ec237
+  ComponentUid: 3a6f844f-8bff-4c1e-b89c-3c48f6baa935
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    {}
+    parentObject: false
+    spawnX: false
+    spawnY: false
+    tileLength: false
+    tilePrefab: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -36,8 +40,11 @@
   Attachments:
     []
   DefaultScriptInputs:
-    -
-      {}
+    - parentObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tilePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      tileLength: !<float> 2500.000000
+      spawnX: !<float> 0.000000
+      spawnY: !<float> 0.000000
   ScriptTypes:
     -
       {}

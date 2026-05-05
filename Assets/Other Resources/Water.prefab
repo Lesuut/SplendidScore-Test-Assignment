@@ -1,0 +1,43 @@
+- !<ObjectPrefab/4a71dc37-800d-416a-9f57-c5305b04987b>
+  PackagePath: ""
+  objects:
+    - !<own> 13b269ba-04fc-4257-a886-0d3cdd3df699
+  LazyLoading: false
+  RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/13b269ba-04fc-4257-a886-0d3cdd3df699>
+  PrefabRemaps:
+    - 13b269ba-04fc-4257-a886-0d3cdd3df699: 13b269ba-04fc-4257-5779-f2c322c20966
+    - 8249690e-2c9d-404e-a1b2-3729669978b6: 8249690e-2c9d-404e-5e4d-c8d699668749
+  Name: Water
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -1407.982178, y: -9.075306, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 2500.000000, y: 100.000000, z: 2500.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8249690e-2c9d-404e-a1b2-3729669978b6
+- !<RenderMeshVisual/8249690e-2c9d-404e-a1b2-3729669978b6>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b55dd079-8e1b-4215-acf0-2248b4963232
+  Mesh: !<reference> 36fc9ebf-84eb-4f5a-979c-61d3f0f208bd
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
