@@ -5,9 +5,12 @@
     - !<own> 7faadcc6-8c23-4e00-86b2-53f40dfc01b9
     - !<own> e8fc2ba2-de3e-49d8-869f-66418e9b86c0
     - !<own> 26e48330-2709-4713-8a31-ad9c74476b7c
+    - !<own> b9b34da0-b2a7-4526-90c5-ca6b31af7ad0
+    - !<own> 33168e4a-3c2c-427f-8328-b4d2eee4ed3a
+    - !<own> 57b8c380-d9e2-4e80-a3cd-5e4665c0c5fb
+    - !<own> 7315dacc-3cfe-4fdb-a430-b025b6f22112
     - !<own> fc1893d8-5956-47b7-8eb3-b61e7f02f03a
     - !<own> 0aee155d-d988-4277-b433-2809039ba7fa
-    - !<own> 31f5319a-c7ab-41de-9c7a-c567486bad79
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -191,34 +194,11 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> b9b34da0-b2a7-4526-90c5-ca6b31af7ad0
-    - !<own> 33168e4a-3c2c-427f-8328-b4d2eee4ed3a
-    - !<own> 57b8c380-d9e2-4e80-a3cd-5e4665c0c5fb
-    - !<own> 7315dacc-3cfe-4fdb-a430-b025b6f22112
+    []
   Components:
     - !<own> 8da99ddc-958f-4af0-abf8-121be34b0c65
     - !<own> 21211db4-9e22-423d-b608-5ae8f583839a
     - !<own> 57f4c71f-b837-486f-9a60-7d7248a0de09
-- !<RenderMeshVisual/2d3f08cd-fb03-4fb3-88f7-e3fac6949e6a>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> d7c13bff-2916-4427-b062-7f9761892e42
-  Mesh: !<reference> 2fa5bdfe-13a9-41d8-a811-674209fbd8d3
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<LightSource/2f39ceaa-3c20-4d1b-ab68-e90b18052680>
   PrefabRemaps:
     []
@@ -258,21 +238,6 @@
     ShadowMapRandomSampling: false
     ShadowMapBias: 0.000000
     ShadowMapSampleCount: 16
-- !<SceneObject/31f5319a-c7ab-41de-9c7a-c567486bad79>
-  PrefabRemaps:
-    []
-  Name: Box
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 65.769653, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 50.000000, y: 50.000000, z: 50.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 2d3f08cd-fb03-4fb3-88f7-e3fac6949e6a
 - !<RenderMeshVisual/32f4921b-d41b-4578-bacb-ceeff21648ce>
   PrefabRemaps:
     []
@@ -297,7 +262,7 @@
   PrefabRemaps:
     []
   Name: Jump
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 5.121353, z: -169.665710}
@@ -332,7 +297,7 @@
   PrefabRemaps:
     []
   Name: Obstacle0
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -280.263916}
@@ -384,7 +349,7 @@
   PrefabRemaps:
     []
   Name: Obstacle1
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -82.677216, y: 9.118820, z: -36.808563}
@@ -496,10 +461,10 @@
   PrefabRemaps:
     []
   Name: Star
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 44.895813, z: -101.880127}
+    Position: {x: 0.000000, y: 44.895813, z: 268.447449}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -576,7 +541,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 2.228989, z: 178.677551}
+    Position: {x: 0.000000, y: 2.228989, z: -215.679993}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
