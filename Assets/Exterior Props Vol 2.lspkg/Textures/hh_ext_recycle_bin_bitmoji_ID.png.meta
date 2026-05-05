@@ -1,0 +1,17 @@
+- !<AssetImportMetadata/bfe62f83-1876-7d56-0115-1e214883e3de>
+  ImportedAssetIds:
+    Texture: !<reference> 526f73d2-ecad-44fe-8e17-9d372e285cad
+  ImporterName: FileTextureImporter
+  PrimaryAsset: !<reference> 526f73d2-ecad-44fe-8e17-9d372e285cad
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<FileCompressionSettings>
+    {}
