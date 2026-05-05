@@ -1,0 +1,37 @@
+- !<NativePackageDescriptor/707eadd4-b58a-4f73-a038-de68eee4b6de>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 20
+    patch: 0
+    build: 26040820
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "Ground SegmentationAllows you to use a Machine Learning model todistinguish the ground from others on the screen.This package contains a ML model for segmenting the groundMake sure after importing, place the downloaded prefabas a child of the Orthographic camera.Click here to learn how to add Orthographic CameraClick here to learn more on Ground Segmentation"
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 96
+  ExportUid: bf397bf7-492b-48d3-b17e-8d70a59ab7f6
+  ComponentUid: b64ec642-d14a-43ea-9675-0c46c942ec6c
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0
