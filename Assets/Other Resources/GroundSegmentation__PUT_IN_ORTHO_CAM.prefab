@@ -820,34 +820,9 @@
   AutoBuild: true
   AutoRun: true
   Inputs:
-    - !<MLInput>
-      Name: data
-      Shape: {x: 128.000000, y: 256.000000, z: 3.000000}
-      Normalizations:
-        - scale: 1.000000
-          bias: 0.000000
-        - scale: 1.000000
-          bias: 0.000000
-        - scale: 1.000000
-          bias: 0.000000
-      Transformer:
-        stretch: true
-        alignment.horizontal: Center
-        alignment.vertical: Center
-        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-        flipX: false
-        flipY: false
-        rotation: None
-      Texture: !<reference> e3536944-df40-455d-b6a5-7ebeca48d7d4
+    []
   Outputs:
-    - !<MLOutput>
-      Name: output_0
-      Shape: {x: 128.000000, y: 256.000000, z: 1.000000}
-      Normalizations:
-        - scale: 1.000000
-          bias: 0.000000
-      InputName: ""
-      OutputTexture: !<reference> 048b6ecc-bd69-4ff3-a985-ced702fe959f
+    []
   Model: !<reference> 0b00c786-2c15-4f1d-82d2-fde9b6401fee
 - !<SceneObject/ee5f6332-14b7-4e91-998f-5ef62cea4599>
   PrefabRemaps:

@@ -160,34 +160,9 @@
   AutoBuild: true
   AutoRun: true
   Inputs:
-    - !<MLInput>
-      Name: data
-      Shape: {x: 128.000000, y: 256.000000, z: 3.000000}
-      Normalizations:
-        - scale: 1.000000
-          bias: 0.000000
-        - scale: 1.000000
-          bias: 0.000000
-        - scale: 1.000000
-          bias: 0.000000
-      Transformer:
-        stretch: true
-        alignment.horizontal: Center
-        alignment.vertical: Center
-        fill: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-        flipX: false
-        flipY: false
-        rotation: None
-      Texture: !<reference> 0dc958d6-ba7c-4e25-aff8-8e8ed69bd47d
+    []
   Outputs:
-    - !<MLOutput>
-      Name: output_0
-      Shape: {x: 128.000000, y: 256.000000, z: 1.000000}
-      Normalizations:
-        - scale: 1.000000
-          bias: 0.000000
-      InputName: ""
-      OutputTexture: !<reference> b398562a-53cc-485c-8ceb-4ce883f9b197
+    []
   Model: !<reference> 17fa029a-59e6-47f3-8a91-9fb079fda8a0
 - !<ScriptComponent/c515a192-d942-46e1-a556-14e8072dfea4>
   PrefabRemaps:

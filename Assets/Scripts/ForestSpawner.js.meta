@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/7d3176b7-47a8-4fdb-a277-334cb1d02d5b>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 81e9de09-b44f-4668-8572-5efe6d2fb4e1
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 81e9de09-b44f-4668-8572-5efe6d2fb4e1
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 5a147b69-200e-4dc0-98b6-aacaac7d4b04
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/5a147b69-200e-4dc0-98b6-aacaac7d4b04>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 5ea3a134-86e4-41b6-82ae-64912e1c0fec
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    count: false
+    maxX: false
+    maxZ: false
+    minX: false
+    minZ: false
+    parentObject: false
+    spawnY: false
+    treePrefab: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - parentObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      treePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      count: 20
+      minX: !<float> -200.000000
+      maxX: !<float> 200.000000
+      minZ: !<float> -200.000000
+      maxZ: !<float> 200.000000
+      spawnY: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
