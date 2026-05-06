@@ -27,7 +27,9 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     animPlayer: false
+    death: false
     fadeTime: false
+    idle: false
     jump: false
     jumpStartTime: false
     run: false
@@ -41,8 +43,10 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - run: !<reference.AnimationAsset> 00000000-0000-0000-0000-000000000000
+    - idle: !<reference.AnimationAsset> 00000000-0000-0000-0000-000000000000
+      run: !<reference.AnimationAsset> 00000000-0000-0000-0000-000000000000
       jump: !<reference.AnimationAsset> 00000000-0000-0000-0000-000000000000
+      death: !<reference.AnimationAsset> 00000000-0000-0000-0000-000000000000
       animPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
       fadeTime: 0.200000
       jumpStartTime: 0.100000

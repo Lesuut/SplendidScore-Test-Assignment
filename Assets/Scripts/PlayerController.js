@@ -62,6 +62,8 @@ script.createEvent("TouchStartEvent").bind(function (e) {
 });
 
 script.createEvent("TouchEndEvent").bind(function (e) {
+    if (global.gameState !== "playing") return;
+
     var dx = e.getTouchPosition().x - touchStartX;
     var dy = e.getTouchPosition().y - touchStartY;
 

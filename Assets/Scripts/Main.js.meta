@@ -27,15 +27,22 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     animationController: false
-    difficulty: false
-    difficultyIncreaseRate: false
+    camera: false
+    densityRampDuration: false
     itemPool: false
     maxDensity: false
+    maxDifficultyRate: false
+    maxHp: false
     maxRunAnimMultiplier: false
     maxWorldSpeed: false
     minDensity: false
     minRunAnimMultiplier: false
     minWorldSpeed: false
+    rateRampDuration: false
+    scoreText: false
+    shakeDuration: false
+    shakeMagnitude: false
+    startDifficultyRate: false
     worldMover: false
   ScriptTypesHidden:
     {}
@@ -49,14 +56,21 @@
     - worldMover: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       animationController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       itemPool: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      camera: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      shakeDuration: 0.400000
+      shakeMagnitude: !<float> 8.000000
       minWorldSpeed: !<float> -1000.000000
       maxWorldSpeed: !<float> -1000.000000
       minRunAnimMultiplier: !<float> 1.000000
       maxRunAnimMultiplier: !<float> 2.000000
       minDensity: 0.200000
       maxDensity: 0.800000
-      difficulty: !<float> 0.000000
-      difficultyIncreaseRate: 0.020000
+      densityRampDuration: !<float> 60.000000
+      startDifficultyRate: 0.005000
+      maxDifficultyRate: 0.016700
+      rateRampDuration: !<float> 30.000000
+      scoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      maxHp: 3
   ScriptTypes:
     -
       {}
