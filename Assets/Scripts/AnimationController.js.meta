@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/99d0ac1d-10b2-4455-aae0-384b66831b0c>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 63448fba-56c0-4bd9-9f28-4f1951819c1b
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 63448fba-56c0-4bd9-9f28-4f1951819c1b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> cbd14a92-2b08-492a-b482-d8ce8de412fa
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/cbd14a92-2b08-492a-b482-d8ce8de412fa>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 331a01b7-2872-4a5d-b750-0cc5a303ef4e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    animPlayer: false
+    fadeTime: false
+    jump: false
+    jumpStartTime: false
+    run: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - run: !<reference.AnimationAsset> 00000000-0000-0000-0000-000000000000
+      jump: !<reference.AnimationAsset> 00000000-0000-0000-0000-000000000000
+      animPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
+      fadeTime: 0.200000
+      jumpStartTime: 0.100000
+  ScriptTypes:
+    -
+      {}

@@ -293,6 +293,26 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<ScriptComponent/4904fddd-422a-4e04-8c7b-8b0196579c0c>
+  PrefabRemaps:
+    []
+  Name: AnimationController
+  Enabled: true
+  ScriptAsset: !<reference> 63448fba-56c0-4bd9-9f28-4f1951819c1b
+  ScriptInputsDefault:
+    fadeTime: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      run: !<reference.AnimationAsset> 9ed6c816-48a1-41ee-85a4-fe26d9cc6ec2
+      jump: !<reference.AnimationAsset> d305450c-94c9-477f-9515-e0aa3fa3b47c
+      animPlayer: !<reference.AnimationPlayer> fe19a4b8-ecc8-46ad-a14f-44995f32b21c
+      fadeTime: 0.200000
+      jumpStartTime: 0.200000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/57b8c380-d9e2-4e80-a3cd-5e4665c0c5fb>
   PrefabRemaps:
     []
@@ -409,6 +429,7 @@
     friendIndex: true
     privacyType: true
     autoDownload: true
+    mixamoAnimation: true
     renderOrder: true
     castShadow: true
     meshQuality: true
@@ -428,7 +449,7 @@
       friendIndex: 0
       privacyType: 1
       autoDownload: true
-      mixamoAnimation: false
+      mixamoAnimation: true
       renderOrder: 0
       castShadow: true
       meshQuality: 0.500000
@@ -457,6 +478,34 @@
     []
   Components:
     - !<own> 2f39ceaa-3c20-4d1b-ab68-e90b18052680
+- !<ScriptComponent/ab2854ef-ff97-417c-98b2-9d6e675bd482>
+  PrefabRemaps:
+    []
+  Name: PlayerController
+  Enabled: true
+  ScriptAsset: !<reference> 3e58a19c-b09f-49e8-a601-d9b47e244aa7
+  ScriptInputsDefault:
+    laneLeft: true
+    laneCenter: true
+    laneRight: true
+    swipeThreshold: true
+    smoothSpeed: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      laneLeft: !<float> -100.000000
+      laneCenter: !<float> 0.000000
+      laneRight: !<float> 100.000000
+      swipeThreshold: 0.100000
+      smoothSpeed: !<float> 10.000000
+      tiltAngle: !<float> 45.000000
+      jumpHeight: !<float> 125.000000
+      jumpDuration: !<float> 1.000000
+      animController: !<reference.ScriptComponent> 4904fddd-422a-4e04-8c7b-8b0196579c0c
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/b9b34da0-b2a7-4526-90c5-ca6b31af7ad0>
   PrefabRemaps:
     []
@@ -549,3 +598,15 @@
     []
   Components:
     - !<own> a1311f4c-8935-48ed-8ef5-749980efe947
+    - !<own> fe19a4b8-ecc8-46ad-a14f-44995f32b21c
+    - !<own> ab2854ef-ff97-417c-98b2-9d6e675bd482
+    - !<own> 4904fddd-422a-4e04-8c7b-8b0196579c0c
+- !<AnimationPlayer/fe19a4b8-ecc8-46ad-a14f-44995f32b21c>
+  PrefabRemaps:
+    []
+  Name: Animation Player
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []

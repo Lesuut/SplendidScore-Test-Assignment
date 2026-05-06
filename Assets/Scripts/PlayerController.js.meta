@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/1b58d0c6-ddf1-4045-9bec-383ced3503f2>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 3e58a19c-b09f-49e8-a601-d9b47e244aa7
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 3e58a19c-b09f-49e8-a601-d9b47e244aa7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> fd976a0d-e4a7-4497-a418-6f49f288f117
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/fd976a0d-e4a7-4497-a418-6f49f288f117>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 2268ed0a-de3c-4456-aa03-0578640e1e24
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    animController: false
+    jumpDuration: false
+    jumpHeight: false
+    laneCenter: false
+    laneLeft: false
+    laneRight: false
+    smoothSpeed: false
+    swipeThreshold: false
+    tiltAngle: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - laneLeft: !<float> -100.000000
+      laneCenter: !<float> 0.000000
+      laneRight: !<float> 100.000000
+      swipeThreshold: 0.100000
+      smoothSpeed: !<float> 10.000000
+      tiltAngle: !<float> 20.000000
+      jumpHeight: !<float> 50.000000
+      jumpDuration: 0.600000
+      animController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
