@@ -55,7 +55,7 @@ script.playDeath = function () {
 };
 
 script.createEvent("OnStartEvent").bind(function () {
-    if (!script.animPlayer) { print("AnimationController: нет animPlayer"); return; }
+    if (!script.animPlayer) { print("AnimationController: animPlayer not assigned"); return; }
 
     if (script.idle)  { idleClip  = AnimationClip.createFromAnimation(IDLE,  script.idle);  idleClip.playbackMode  = PlaybackMode.Loop; }
     if (script.run)   { runClip   = AnimationClip.createFromAnimation(RUN,   script.run);   runClip.playbackMode   = PlaybackMode.Loop; }

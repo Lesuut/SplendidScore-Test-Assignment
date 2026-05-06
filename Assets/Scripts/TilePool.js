@@ -17,24 +17,21 @@ script.createEvent("OnStartEvent").bind(function () {
 });
 
 script.createEvent("UpdateEvent").bind(function () {
-    var parent = script.parentObject || script.getSceneObject();
-    var parentWorldZ = parent.getTransform().getWorldPosition().z;
+    var parent     = script.parentObject || script.getSceneObject();
+    var parentZ    = parent.getTransform().getWorldPosition().z;
 
     for (var i = 0; i < tiles.length; i++) {
-        var t = tiles[i].getTransform();
+        var t      = tiles[i].getTransform();
         var worldZ = t.getWorldPosition().z;
 
-        // Проверяем по абсолютной (мировой) позиции
         if (worldZ < -script.tileLength) {
-            // Найти максимальный мировой Z среди всех тайлов
             var maxWorldZ = -Infinity;
             for (var j = 0; j < tiles.length; j++) {
                 var wz = tiles[j].getTransform().getWorldPosition().z;
                 if (wz > maxWorldZ) maxWorldZ = wz;
             }
-            // Желаемый мировой Z → переводим в локальный относительно родителя
             var desiredWorldZ = maxWorldZ + script.tileLength;
-            t.setLocalPosition(new vec3(script.spawnX, script.spawnY, desiredWorldZ - parentWorldZ));
+            t.setLocalPosition(new vec3(script.spawnX, script.spawnY, desiredWorldZ - parentZ));
         }
     }
 });

@@ -3,8 +3,8 @@
 // @input int count = 20 {"label": "Count"}
 // @input float minX = -200 {"label": "Min X"}
 // @input float maxX = 200 {"label": "Max X"}
-// @input float minZ = -200 {"label": "Min Z (Y на карте)"}
-// @input float maxZ = 200 {"label": "Max Z (Y на карте)"}
+// @input float minZ = -200 {"label": "Min Z"}
+// @input float maxZ = 200  {"label": "Max Z"}
 // @input float spawnY = 0 {"label": "Height (Y)"}
 
 function rnd(min, max) {
@@ -42,5 +42,5 @@ script.createEvent("OnStartEvent").bind(function () {
         ));
     }
 
-    print("ForestSpawner: spawned " + script.count + " trees");
 });
+
