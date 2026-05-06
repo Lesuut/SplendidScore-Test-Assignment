@@ -1,27 +1,27 @@
-// ── Компоненты ─────────────────────────────────────────────────────────────
+// ── Components ─────────────────────────────────────────────────────────────
 // @input Component.ScriptComponent worldMover         {"label": "World Mover"}
 // @input Component.ScriptComponent animationController {"label": "Anim Controller"}
 // @input Component.ScriptComponent itemPool           {"label": "Item Pool"}
 // @input SceneObject               camera             {"label": "Camera"}
 
-// ── Шейк камеры ────────────────────────────────────────────────────────────
+// ── Camera Shake ────────────────────────────────────────────────────────────
 // @input float shakeDuration  = 0.4 {"label": "Shake Duration (sec)"}
 // @input float shakeMagnitude = 8   {"label": "Shake Magnitude (cm)"}
 
-// ── Скорость мира ──────────────────────────────────────────────────────────
+// ── World Speed ────────────────────────────────────────────────────────────
 // @input float minWorldSpeed = -1000 {"label": "Min World Speed (cm/s)"}
 // @input float maxWorldSpeed = -2500 {"label": "Max World Speed (cm/s)"}
 
-// ── Скорость анимации бега ─────────────────────────────────────────────────
+// ── Run Animation Speed ─────────────────────────────────────────────────────
 // @input float minRunAnimMultiplier = 1 {"label": "Min Run Anim Speed"}
 // @input float maxRunAnimMultiplier = 2 {"label": "Max Run Anim Speed"}
 
-// ── Плотность препятствий ──────────────────────────────────────────────────
+// ── Obstacle Density ───────────────────────────────────────────────────────
 // @input float minDensity         = 0.2 {"label": "Min Density (0–1)"}
 // @input float maxDensity         = 0.8 {"label": "Max Density (0–1)"}
 // @input float densityRampDuration = 60  {"label": "Density Ramp Duration (sec)"}
 
-// ── Сложность ──────────────────────────────────────────────────────────────
+// ── Difficulty ─────────────────────────────────────────────────────────────
 // @input float startDifficultyRate = 0.005  {"label": "Start Difficulty Rate (per sec)"}
 // @input float maxDifficultyRate   = 0.0167 {"label": "Max Difficulty Rate (per sec)"}
 // @input float rateRampDuration    = 30     {"label": "Rate Ramp Duration (sec)"}
@@ -29,7 +29,7 @@
 // ── UI ─────────────────────────────────────────────────────────────────────
 // @input Component.Text scoreText {"label": "Score Text"}
 
-// ── Жизни ──────────────────────────────────────────────────────────────────
+// ── Lives ──────────────────────────────────────────────────────────────────
 // @input SceneObject[] heartImages {"label": "Heart Images"}
 
 // ───────────────────────────────────────────────────────────────────────────
@@ -49,8 +49,8 @@ var deathSlowFrom  = 0;
 var startupTimer   = 0;
 var TRANSITION_DUR = 0.5;
 
-var camTransform    = null;
-var camOrigin       = null;
+var camTransform = null;
+var camOrigin    = null;
 
 // ───────────────────────────────────────────────────────────────────────────
 
@@ -66,9 +66,8 @@ function updateHearts() {
 }
 
 function updateScoreText() {
-    if (script.scoreText) script.scoreText.text = "Score: " + score;
+    if (script.scoreText) script.scoreText.text = "Score " + score;
 }
-
 
 function applyDifficulty(d) {
     if (script.worldMover) {
@@ -106,7 +105,7 @@ script.createEvent("OnStartEvent").bind(function () {
         camTransform = script.camera.getTransform();
         camOrigin    = camTransform.getLocalPosition();
     }
-if (script.worldMover) script.worldMover.speed = 0;
+    if (script.worldMover) script.worldMover.speed = 0;
     applyDensity(0);
     updateScoreText();
     if (script.animationController) script.animationController.playIdle();
@@ -124,7 +123,7 @@ global.gameOnHit = function (name) {
     if (name.indexOf("Star") !== -1) {
         score++;
         updateScoreText();
-        print("[Game] +1 звезда! Score: " + score + " | HP: " + hp);
+        print("[Game] +1 star! Score: " + score + " | HP: " + hp);
     } else {
         hp--;
         currentDifficulty = 0;
@@ -132,7 +131,7 @@ global.gameOnHit = function (name) {
         rateTimer         = 0;
         densityTimer      = 0;
         updateHearts();
-        print("[Game] Удар! HP: " + hp + " | Score: " + score);
+        print("[Game] Hit! HP: " + hp + " | Score: " + score);
 
         shakeTimer = script.shakeDuration;
 
@@ -150,7 +149,7 @@ global.gameOnHit = function (name) {
 script.createEvent("UpdateEvent").bind(function (e) {
     var dt = e.getDeltaTime();
 
-    // Шейк камеры
+    // Camera shake
     if (camTransform && camOrigin) {
         if (shakeTimer > 0) {
             shakeTimer -= dt;
@@ -165,7 +164,7 @@ script.createEvent("UpdateEvent").bind(function (e) {
         }
     }
 
-    // Затухание при смерти
+    // Death slowdown
     if (global.gameState === "dead") {
         if (deathSlowTimer > 0) {
             deathSlowTimer -= dt;
@@ -179,7 +178,7 @@ script.createEvent("UpdateEvent").bind(function (e) {
 
     if (global.gameState !== "playing") return;
 
-    // Нарастание скорости при старте
+    // Difficulty ramp
     rateTimer         = Math.min(script.rateRampDuration, rateTimer + dt);
     currentRate       = lerp(script.startDifficultyRate, script.maxDifficultyRate, rateTimer / script.rateRampDuration);
     currentDifficulty = Math.min(1, currentDifficulty + currentRate * dt);
