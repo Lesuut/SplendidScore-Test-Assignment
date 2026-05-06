@@ -2,13 +2,13 @@
 
 An endless runner AR lens for Snapchat built in Lens Studio.
 
-![Gameplay](ezgif-62a7ba57099d590e.gif)
+![Gameplay](ezgif-6185dee7da8f4477.gif)
 
 ## Gameplay
 
 Tap to start. Your character runs automatically — dodge obstacles and collect stars to build your score. You have **3 lives** shown as hearts in the top corner. Each hit drains one heart and resets difficulty. Lose all three and it's game over.
 
-![Hearts & Scoring](ezgif-6185dee7da8f4477.gif)
+![Hearts & Scoring](ezgif-62a7ba57099d590e.gif)
 
 ## Features
 
