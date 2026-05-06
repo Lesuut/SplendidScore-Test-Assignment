@@ -31,6 +31,7 @@
     jump: false
     jumpStartTime: false
     run: false
+    runSpeedMultiplier: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -45,6 +46,7 @@
       animPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
       fadeTime: 0.200000
       jumpStartTime: 0.100000
+      runSpeedMultiplier: !<float> 1.000000
   ScriptTypes:
     -
       {}

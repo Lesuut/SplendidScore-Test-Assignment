@@ -26,7 +26,17 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    {}
+    animationController: false
+    difficulty: false
+    difficultyIncreaseRate: false
+    itemPool: false
+    maxDensity: false
+    maxRunAnimMultiplier: false
+    maxWorldSpeed: false
+    minDensity: false
+    minRunAnimMultiplier: false
+    minWorldSpeed: false
+    worldMover: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -36,8 +46,17 @@
   Attachments:
     []
   DefaultScriptInputs:
-    -
-      {}
+    - worldMover: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      animationController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      itemPool: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      minWorldSpeed: !<float> -1000.000000
+      maxWorldSpeed: !<float> -1000.000000
+      minRunAnimMultiplier: !<float> 1.000000
+      maxRunAnimMultiplier: !<float> 2.000000
+      minDensity: 0.200000
+      maxDensity: 0.800000
+      difficulty: !<float> 0.000000
+      difficultyIncreaseRate: 0.020000
   ScriptTypes:
     -
       {}

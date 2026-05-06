@@ -3,6 +3,7 @@
 // @input Component.AnimationPlayer animPlayer {"label": "Animation Player"}
 // @input float fadeTime = 0.2 {"label": "Fade Duration (sec)"}
 // @input float jumpStartTime = 0.1 {"label": "Jump Start Time (sec)"}
+// @input float runSpeedMultiplier = 1.0 {"label": "Run Speed Multiplier"}
 
 var RUN  = "run";
 var JUMP = "jump";
@@ -34,6 +35,7 @@ script.createEvent("OnStartEvent").bind(function () {
     jumpClip = AnimationClip.createFromAnimation(JUMP, script.jump);
 
     runClip.playbackMode  = PlaybackMode.Loop;
+    runClip.playbackSpeed = script.runSpeedMultiplier;
     jumpClip.playbackMode = PlaybackMode.Loop;
     jumpClip.begin = script.jumpStartTime;
 
@@ -52,6 +54,7 @@ script.createEvent("UpdateEvent").bind(function (e) {
     var speed = script.fadeTime > 0 ? e.getDeltaTime() / script.fadeTime : 1;
     blendCurrent += (blendTarget - blendCurrent) * Math.min(speed, 1);
 
-    runClip.weight  = 1 - blendCurrent;
-    jumpClip.weight = blendCurrent;
+    runClip.weight         = 1 - blendCurrent;
+    jumpClip.weight        = blendCurrent;
+    runClip.playbackSpeed  = script.runSpeedMultiplier;
 });

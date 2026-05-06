@@ -1,0 +1,77 @@
+- !<ObjectPrefab/ffa3ba01-fc2a-40c9-b2a0-a851d0b34364>
+  PackagePath: ""
+  objects:
+    - !<own> ceba4d4c-dcb6-4324-a75a-8a2e60ba5e07
+  LazyLoading: false
+  RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/2695feba-3e69-436d-9c71-159d3f7dac59>
+  PrefabRemaps:
+    []
+  Name: component_6
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: Caster
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b268fc59-6112-4226-a5f2-334a9d290983
+  Mesh: !<reference> 7602e027-98b9-47bc-a7fc-dcb249700339
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/c0b16214-76a8-4351-921b-c5cf0346d82f>
+  PrefabRemaps:
+    []
+  Name: FloatSpin
+  Enabled: true
+  ScriptAsset: !<reference> 9de1444b-ec14-47f5-babf-5483fd6d3ca1
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      bobHeight: !<float> 10.000000
+      bobSpeed: !<float> 5.000000
+      spinSpeed: !<float> 180.000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/c9d3d16e-a110-4290-9457-75a019287458>
+  PrefabRemaps:
+    []
+  Name: Star
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 86.302437, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2695feba-3e69-436d-9c71-159d3f7dac59
+    - !<own> c0b16214-76a8-4351-921b-c5cf0346d82f
+- !<SceneObject/ceba4d4c-dcb6-4324-a75a-8a2e60ba5e07>
+  PrefabRemaps:
+    - 7b75bd70-b141-41d9-8ddc-e844c4922acd: 7b75bd70-b141-41d9-7223-17bb3b6dd532
+    - ceba4d4c-dcb6-4324-a75a-8a2e60ba5e07: ceba4d4c-dcb6-4324-58a5-75d19f45a1f8
+  Name: Star
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c9d3d16e-a110-4290-9457-75a019287458
+  Components:
+    []

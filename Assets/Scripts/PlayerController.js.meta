@@ -27,12 +27,13 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     animController: false
+    fastFallMultiplier: false
     jumpDuration: false
     jumpHeight: false
     laneCenter: false
     laneLeft: false
     laneRight: false
-    smoothSpeed: false
+    laneSmooth: false
     swipeThreshold: false
     tiltAngle: false
   ScriptTypesHidden:
@@ -48,10 +49,11 @@
       laneCenter: !<float> 0.000000
       laneRight: !<float> 100.000000
       swipeThreshold: 0.100000
-      smoothSpeed: !<float> 10.000000
+      laneSmooth: !<float> 10.000000
       tiltAngle: !<float> 20.000000
       jumpHeight: !<float> 50.000000
       jumpDuration: 0.600000
+      fastFallMultiplier: !<float> 3.000000
       animController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -

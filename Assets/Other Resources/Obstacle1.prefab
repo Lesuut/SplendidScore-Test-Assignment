@@ -1,0 +1,43 @@
+- !<ObjectPrefab/968d8610-e553-464d-9125-dcdc973c86d9>
+  PackagePath: ""
+  objects:
+    - !<own> fd039cfa-53bb-4a7d-95db-afe7185b1d3e
+  LazyLoading: false
+  RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/6cec4e58-0f52-4be6-af50-d7deb55dbde4>
+  PrefabRemaps:
+    []
+  Name: component_15
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: Caster
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 24029be5-3374-4f15-a947-ee37b4332603
+  Mesh: !<reference> 647cbbbf-d336-4fa7-91f0-86f152432b45
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/fd039cfa-53bb-4a7d-95db-afe7185b1d3e>
+  PrefabRemaps:
+    - 6cec4e58-0f52-4be6-af50-d7deb55dbde4: 6cec4e58-0f52-4be6-50af-28214aa2421b
+    - fd039cfa-53bb-4a7d-95db-afe7185b1d3e: fd039cfa-53bb-4a7d-6a24-5018e7a4e2c1
+  Name: Obstacle1
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -82.677216, y: 9.118820, z: -36.808563}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 6cec4e58-0f52-4be6-af50-d7deb55dbde4

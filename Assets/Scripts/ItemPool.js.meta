@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/4a7762c9-4d44-4f54-9f0d-c7841acaed46>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 7fdb4e1e-1b56-4044-89d3-f76af5aece00
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 7fdb4e1e-1b56-4044-89d3-f76af5aece00
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> e61000d0-7a9f-45b1-b850-51c4852862f4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/e61000d0-7a9f-45b1-b850-51c4852862f4>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 4b3eda0d-990a-4d57-9b6b-9c27e8085607
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    density: false
+    obstaclePrefabs: false
+    parentObject: false
+    rotationMaxY: false
+    rotationMinY: false
+    rowCount: false
+    spacing: false
+    spawnX0: false
+    spawnX1: false
+    spawnX2: false
+    spawnY: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - parentObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      obstaclePrefabs: !<reference.ObjectPrefab[]>
+        []
+      rotationMinY: !<float[]>
+        []
+      rotationMaxY: !<float[]>
+        []
+      rowCount: 8
+      spacing: !<float> 300.000000
+      spawnX0: !<float> -100.000000
+      spawnX1: !<float> 0.000000
+      spawnX2: !<float> 100.000000
+      spawnY: !<float> 0.000000
+      density: 0.500000
+  ScriptTypes:
+    -
+      {}

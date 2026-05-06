@@ -1,5 +1,5 @@
 // @input SceneObject target {"label": "Target (optional)"}
-// @input float speed = 100 {"label": "Speed (cm/s)"}
+// @input float speed = -500 {"label": "Speed (cm/s)"}
 
 var t = (script.target || script.getSceneObject()).getTransform();
 
