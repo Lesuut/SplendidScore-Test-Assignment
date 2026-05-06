@@ -29,10 +29,10 @@
     animationController: false
     camera: false
     densityRampDuration: false
+    heartImages: false
     itemPool: false
     maxDensity: false
     maxDifficultyRate: false
-    maxHp: false
     maxRunAnimMultiplier: false
     maxWorldSpeed: false
     minDensity: false
@@ -70,7 +70,8 @@
       maxDifficultyRate: 0.016700
       rateRampDuration: !<float> 30.000000
       scoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      maxHp: 3
+      heartImages: !<reference.SceneObject[]>
+        []
   ScriptTypes:
     -
       {}

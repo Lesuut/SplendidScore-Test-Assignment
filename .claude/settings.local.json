@@ -1,0 +1,15 @@
+{
+  "extraKnownMarketplaces": {
+    "lens-studio-extensions": {
+      "source": {
+        "source": "github",
+        "repo": "Snapchat/Lens-Studio-Plugins"
+      }
+    }
+  },
+  "permissions": {
+    "allow": [
+      "mcp__lens-studio"
+    ]
+  }
+}

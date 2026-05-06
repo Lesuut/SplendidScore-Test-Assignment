@@ -29,8 +29,8 @@
 // ── UI ─────────────────────────────────────────────────────────────────────
 // @input Component.Text scoreText {"label": "Score Text"}
 
-// ── Игра ───────────────────────────────────────────────────────────────────
-// @input int maxHp = 3 {"label": "Max HP"}
+// ── Жизни ──────────────────────────────────────────────────────────────────
+// @input SceneObject[] heartImages {"label": "Heart Images"}
 
 // ───────────────────────────────────────────────────────────────────────────
 
@@ -40,52 +40,35 @@ var currentDifficulty = 0;
 var currentRate       = script.startDifficultyRate;
 var rateTimer         = 0;
 var densityTimer      = 0;
-var hp    = script.maxHp;
+var hp    = 3;
 var score = 0;
 
-var shakeTimer      = 0;
-var deathSlowTimer  = 0;
-var deathSlowFrom   = 0;
-var startupTimer    = 0;
-var TRANSITION_DUR  = 0.5;
-var camTransform   = null;
-var camOrigin      = null;
+var shakeTimer     = 0;
+var deathSlowTimer = 0;
+var deathSlowFrom  = 0;
+var startupTimer   = 0;
+var TRANSITION_DUR = 0.5;
 
-function resetGame() {
-    global.gameState  = "playing";
-    currentDifficulty = 0;
-    currentRate       = script.startDifficultyRate;
-    rateTimer         = 0;
-    densityTimer      = 0;
-    startupTimer      = TRANSITION_DUR;
-    hp                = script.maxHp;
-    score             = 0;
-    updateScoreText();
-    if (script.animationController) script.animationController.playRun();
-}
+var camTransform    = null;
+var camOrigin       = null;
 
-script.createEvent("OnStartEvent").bind(function () {
-    if (script.camera) {
-        camTransform = script.camera.getTransform();
-        camOrigin    = camTransform.getLocalPosition();
-    }
-    if (script.worldMover) script.worldMover.speed = 0;
-    applyDensity(0);
-    updateScoreText();
-    if (script.animationController) script.animationController.playIdle();
-});
-
-script.createEvent("TouchStartEvent").bind(function () {
-    if (global.gameState === "idle" || global.gameState === "dead") {
-        resetGame();
-    }
-});
+// ───────────────────────────────────────────────────────────────────────────
 
 function lerp(a, b, t) { return a + (b - a) * t; }
+
+function updateHearts() {
+    if (!script.heartImages) return;
+    for (var i = 0; i < script.heartImages.length; i++) {
+        if (script.heartImages[i]) {
+            script.heartImages[i].enabled = (i < hp);
+        }
+    }
+}
 
 function updateScoreText() {
     if (script.scoreText) script.scoreText.text = "Score: " + score;
 }
+
 
 function applyDifficulty(d) {
     if (script.worldMover) {
@@ -102,6 +85,39 @@ function applyDensity(d) {
     }
 }
 
+function resetGame() {
+    global.gameState  = "playing";
+    currentDifficulty = 0;
+    currentRate       = script.startDifficultyRate;
+    rateTimer         = 0;
+    densityTimer      = 0;
+    startupTimer      = TRANSITION_DUR;
+    hp                = 3;
+    score             = 0;
+    updateScoreText();
+    updateHearts();
+    if (script.animationController) script.animationController.playRun();
+}
+
+// ───────────────────────────────────────────────────────────────────────────
+
+script.createEvent("OnStartEvent").bind(function () {
+    if (script.camera) {
+        camTransform = script.camera.getTransform();
+        camOrigin    = camTransform.getLocalPosition();
+    }
+if (script.worldMover) script.worldMover.speed = 0;
+    applyDensity(0);
+    updateScoreText();
+    if (script.animationController) script.animationController.playIdle();
+});
+
+script.createEvent("TouchStartEvent").bind(function () {
+    if (global.gameState === "idle" || global.gameState === "dead") {
+        resetGame();
+    }
+});
+
 global.gameOnHit = function (name) {
     if (global.gameState !== "playing") return;
 
@@ -115,14 +131,15 @@ global.gameOnHit = function (name) {
         currentRate       = script.startDifficultyRate;
         rateTimer         = 0;
         densityTimer      = 0;
+        updateHearts();
         print("[Game] Удар! HP: " + hp + " | Score: " + score);
 
         shakeTimer = script.shakeDuration;
 
         if (hp <= 0) {
-            global.gameState  = "dead";
-            deathSlowTimer    = 0.5;
-            deathSlowFrom     = script.worldMover ? script.worldMover.speed : 0;
+            global.gameState = "dead";
+            deathSlowTimer   = TRANSITION_DUR;
+            deathSlowFrom    = script.worldMover ? script.worldMover.speed : 0;
             applyDensity(0);
             if (script.animationController) script.animationController.playDeath();
             print("[Game] GAME OVER | Score: " + score);
@@ -133,11 +150,11 @@ global.gameOnHit = function (name) {
 script.createEvent("UpdateEvent").bind(function (e) {
     var dt = e.getDeltaTime();
 
+    // Шейк камеры
     if (camTransform && camOrigin) {
         if (shakeTimer > 0) {
             shakeTimer -= dt;
-            var t    = shakeTimer / script.shakeDuration;
-            var mag  = t * script.shakeMagnitude;
+            var mag = (shakeTimer / script.shakeDuration) * script.shakeMagnitude;
             camTransform.setLocalPosition(new vec3(
                 camOrigin.x + (Math.random() * 2 - 1) * mag,
                 camOrigin.y + (Math.random() * 2 - 1) * mag,
@@ -148,16 +165,23 @@ script.createEvent("UpdateEvent").bind(function (e) {
         }
     }
 
-    if (global.gameState === "dead" && deathSlowTimer > 0) {
-        deathSlowTimer -= dt;
-        var progress = Math.max(0, deathSlowTimer / 0.5);
-        if (script.worldMover) script.worldMover.speed = deathSlowFrom * progress;
+    // Затухание при смерти
+    if (global.gameState === "dead") {
+        if (deathSlowTimer > 0) {
+            deathSlowTimer -= dt;
+            var progress = Math.max(0, deathSlowTimer / TRANSITION_DUR);
+            if (script.worldMover) script.worldMover.speed = deathSlowFrom * progress;
+        } else {
+            deathSlowTimer = -1;
+        }
+        return;
     }
 
     if (global.gameState !== "playing") return;
 
-    rateTimer     = Math.min(script.rateRampDuration, rateTimer + dt);
-    currentRate   = lerp(script.startDifficultyRate, script.maxDifficultyRate, rateTimer / script.rateRampDuration);
+    // Нарастание скорости при старте
+    rateTimer         = Math.min(script.rateRampDuration, rateTimer + dt);
+    currentRate       = lerp(script.startDifficultyRate, script.maxDifficultyRate, rateTimer / script.rateRampDuration);
     currentDifficulty = Math.min(1, currentDifficulty + currentRate * dt);
     applyDifficulty(currentDifficulty);
 
@@ -167,6 +191,6 @@ script.createEvent("UpdateEvent").bind(function (e) {
         if (script.worldMover) script.worldMover.speed *= rampT;
     }
 
-    densityTimer  = Math.min(script.densityRampDuration, densityTimer + dt);
+    densityTimer = Math.min(script.densityRampDuration, densityTimer + dt);
     applyDensity(densityTimer / script.densityRampDuration);
 });
