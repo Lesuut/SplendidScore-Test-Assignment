@@ -48,6 +48,17 @@ function applyDensity(row) {
     }
 }
 
+script.getActiveObstacles = function () {
+    var result = [];
+    for (var r = 0; r < rows.length; r++) {
+        var obs = rows[r].obstacles;
+        for (var i = 0; i < obs.length; i++) {
+            if (obs[i].enabled) result.push(obs[i]);
+        }
+    }
+    return result;
+};
+
 // ───────────────────────────────────────────────────────────────────────────
 
 script.createEvent("OnStartEvent").bind(function () {
